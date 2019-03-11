@@ -32,19 +32,19 @@ class GildedRose {
     		items[2].sellIn = sellIn;
             items[2].quality = 80;
     	}else if("Backstage passes".equals(name)){//剧场后台通行证
-    		if(sellIn>10){
+    		if(sellIn>10){//距离开场时间大于10天
     			items[3].sellIn = sellIn-1;
                 items[3].quality = quality+1;
     		}
-    		if(sellIn>5 && sellIn<10){
+    		if(sellIn>5 && sellIn<10){//距离开场时间大于5天,小于10
     			items[3].sellIn = sellIn-1;
                 items[3].quality = quality+2;
     		}
-    		if(sellIn>0 && sellIn<5){
+    		if(sellIn>0 && sellIn<5){//距离开场时间大于0天,小于5
     			items[3].sellIn = sellIn-1;
                 items[3].quality = quality+3;
     		}
-    		if(sellIn<0){
+    		if(sellIn<0){//演出结束后
     			items[3].sellIn = sellIn;
                 items[3].quality = 0;
     		}
